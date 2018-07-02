@@ -1,0 +1,15 @@
+{
+  "name": "dingusjs",
+  "version": "0.0.1",
+  "description": "Record-then-assert test double library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hector Dearman <hjd@google.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "ospec": "^3.0.1",
+    "typescript": "^2.9.2"
+  }
+}
