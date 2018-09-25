@@ -41,4 +41,18 @@ o.spec('typescript', () => {
     o(d().bar().calls).deepEquals([]);
   });
 
+  o('it types string[]', () => {
+    const d = dingus<string[]>('foo');
+    o('' + d[0]).equals('<Dingus(foo.0)>');
+    const f = (_: string[]): void => null;
+    f(d);
+  });
+
+  o('it types string[] nested', () => {
+    const d = dingus<{bar: string[]}>('foo');
+    o('' + d.bar[0]).equals('<Dingus(foo.bar.0)>');
+    const f = (_: {bar: string[]}): void => null;
+    f(d);
+  });
+
 });

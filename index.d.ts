@@ -19,16 +19,16 @@ export interface Dingus {
 }
 
 export type DingusAttrs<T> = {
-  [P in keyof T]: Dingus & DingusAttrs<T[P]> & MaybeCallable<T[P]>;
+  [P in keyof T]: Dingus & DingusAttrs<T[P]> & MaybeCallable<T[P]> & T[P];
 };
 
 type F = (...args: any[]) => any;
 
 type Callable<T extends F> = {
-  (...args: any[]): Dingus & DingusAttrs<ReturnType<T>> & MaybeCallable<ReturnType<T>>;
+  (...args: any[]): Dingus & DingusAttrs<ReturnType<T>> & MaybeCallable<ReturnType<T>> & ReturnType<T>;
 };
 
 type MaybeCallable<T> = T extends F ? Callable<T> : {};
 
-export function dingus<T>(name?: string): Dingus & DingusAttrs<T> & MaybeCallable<T>;
+export function dingus<T>(name?: string): Dingus & DingusAttrs<T> & MaybeCallable<T> & T;
 
