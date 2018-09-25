@@ -3,6 +3,10 @@
   "version": "0.0.2",
   "description": "Record-then-assert test double library",
   "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/chromy/dingusjs.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
