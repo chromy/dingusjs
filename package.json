@@ -1,6 +1,6 @@
 {
   "name": "dingusjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Record-then-assert test double library",
   "main": "index.js",
   "repository": {
